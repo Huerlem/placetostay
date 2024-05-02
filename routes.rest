@@ -1,0 +1,33 @@
+###
+GET http://localhost:3000/accommodation/Hampshire
+
+###
+GET http://localhost:3000/type/pub/location/Hampshire
+
+###
+GET http://localhost:3000/type/hotel/location/Colorado
+
+##################
+# Booking an acc #
+##################
+
+### bookking
+POST http://localhost:3000/bookings/add
+Content-Type: application/json
+
+{
+    "accID": 2,
+    "thedate": 220601,
+    "username": "kate123",
+    "npeople": 4
+}
+
+### checking de new booking
+GET http://localhost:3000/accbookings/id/10
+
+
+### updating availability
+POST http://localhost:3000/accdates/2/2/220601/booking 
+
+### checking new availability
+GET http://localhost:3000/accdates/ID/4 
